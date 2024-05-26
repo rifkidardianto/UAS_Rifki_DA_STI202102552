@@ -1,0 +1,30 @@
+name: project_uas_rifki
+description: "Apps Clone Gojek untuk UAS - Rifki Dwi Ardianto - STI202102552"
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+dependencies:
+  auto_size_text: ^3.0.0
+  bloc: ^8.1.4
+  carousel_slider: ^4.2.1
+  dots_indicator: ^3.0.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.5
+  google_fonts: ^6.2.1
+  shimmer: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/productImages/
+    - assets/gridHeader/
