@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../grid_onpress/screens/go_ride_view.dart';
+
 class GridViewWidget extends StatelessWidget {
   const GridViewWidget({super.key});
 
@@ -27,30 +29,55 @@ class GridViewWidget extends StatelessWidget {
           crossAxisSpacing: 1,
         ),
         itemCount: gridMap.length,
-        itemBuilder: (context, index) => Column(
-          children: [
-            Container(
-              height: 60, // Ubah tinggi ikon
-              width: 60, // Ubah lebar ikon
-              decoration: BoxDecoration(
+        itemBuilder: (context, index) => GestureDetector(
+          onTap: () {
+            // Navigasi sesuai dengan gambar yang ditekan
+            switch (gridMap.keys.elementAt(index)) {
+              case "GoRide":
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const GoRideView()),
+                );
+                break;
+              case "GoCar":
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const GoRideView()),
+                );
+                break;
+              // Tambahkan case lain jika diperlukan
+              default:
+                // Do nothing for other cases
+                break;
+            }
+          },
+          child: Column(
+            children: [
+              Container(
+                height: 60, // Ubah tinggi ikon
+                width: 60, // Ubah lebar ikon
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
-                  color: gridMap.values.elementAt(index)[1]),
-              child: Center(
-                child: Image.asset(
-                  "${gridMap.values.elementAt(index)[0]}",
-                  height: 60, // Ubah tinggi ikon
-                  width: 60, // Ubah lebar ikon
+                  color: gridMap.values.elementAt(index)[1],
+                ),
+                child: Center(
+                  child: Image.asset(
+                    "${gridMap.values.elementAt(index)[0]}",
+                    height: 60, // Ubah tinggi ikon
+                    width: 60, // Ubah lebar ikon
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 5.0,
-            ),
-            Text(
-              gridMap.keys.elementAt(index),
-              style: const TextStyle(fontWeight: FontWeight.w100, fontSize: 13),
-            )
-          ],
+              const SizedBox(
+                height: 5.0,
+              ),
+              Text(
+                gridMap.keys.elementAt(index),
+                style:
+                    const TextStyle(fontWeight: FontWeight.w100, fontSize: 13),
+              )
+            ],
+          ),
         ),
       ),
     );

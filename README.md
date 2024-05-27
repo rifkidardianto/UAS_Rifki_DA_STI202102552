@@ -25,5 +25,6 @@ Tampilan Home - Promo - Pesanan - Chat
 ![image](screenshot/promo.png)
 ![image](screenshot/pesanan.png)
 ![image](screenshot/chat.png)
+![image](screenshot/goride.png)
 
 ![image](screenshot/gojek_app_clone_resize.gif)
