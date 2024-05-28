@@ -33,7 +33,4 @@ untuk widget yang digunakan adalah StatelessWidget
 # Tampilan GoRide
 
 ![image](screenshot/goride.png)
-
-
-
 ![image](screenshot/gojek_app_clone_resize.gif)
