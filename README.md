@@ -10,6 +10,7 @@ Tugas   : Assignment UAS
 
 Project ini dibuat untuk memenuhi penyelesaian UAS.
 Dimana penugasannya untuk membuat clone apps dari sumber Play Store, dan app yang saya pilih yakni aplikasi "Gojek" sebagai penyelesaian tugas UAS.
+
 Berikut linknya dalam Play Store :
 
 <a href="https://play.google.com/store/search?q=gojek&c=apps">Link Gojek</a>
