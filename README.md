@@ -20,12 +20,20 @@ Berikut linknya dalam Play Store :
 Dalam aplikasi clone gojek pada tampilan home yang dibuat sesuai dengan saat ini di bulan Mei 2024 waktu promo Gojek Plus jadi berbeda dengan tampilan yang ada di play store menggunakan navigasi yang menampilkan layar Home, Promo, Pesanan dan Chat.
 untuk widget yang digunakan adalah StatelessWidget
 
-Tampilan Home - Promo - Pesanan - Chat
+# Tampilan Home - Promo
 
 ![image](screenshot/home.png)
 ![image](screenshot/promo.png)
+
+# Tampilan Pesanan - Chat
+
 ![image](screenshot/pesanan.png)
 ![image](screenshot/chat.png)
+
+# Tampilan GoRide
+
 ![image](screenshot/goride.png)
+
+
 
 ![image](screenshot/gojek_app_clone_resize.gif)
