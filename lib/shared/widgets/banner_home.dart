@@ -7,6 +7,7 @@ class BannerHome extends StatelessWidget {
   Widget build(BuildContext context) {
     List<String> images = [
       "assets/productImages/bannerplus.jpg",
+      "assets/productImages/bannerm.jpg",
     ];
 
     return SizedBox(
