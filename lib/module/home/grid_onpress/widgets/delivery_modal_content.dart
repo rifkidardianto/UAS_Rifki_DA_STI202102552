@@ -1,56 +1,83 @@
 import 'package:flutter/material.dart';
+import 'map_gojek_kecil.dart';
 
 class DeliveryModalContent extends StatelessWidget {
-  const DeliveryModalContent({
-    super.key,
-  });
+  const DeliveryModalContent({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(15),
         boxShadow: const [
           BoxShadow(
             color: Colors.black12,
-            blurRadius: 8,
+            blurRadius: 5,
           ),
         ],
       ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
+          mainAxisSize:
+              MainAxisSize.min, // Ensure the column takes minimum space needed
           children: [
-            const Row(
-              children: [
-                Icon(
-                  Icons.search,
-                  color: Colors.blue, // Ganti warna ikon sesuai keinginan
-                ),
-                SizedBox(width: 8),
-                Expanded(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: 'Search for a destination',
-                      hintStyle:
-                          TextStyle(color: Colors.grey), // Warna teks hint
-                      border: InputBorder.none,
-                    ),
-                    style: TextStyle(color: Colors.black), // Warna teks input
-                  ),
-                ),
-              ],
+            // Google Map Widget (Assuming MapScreen is your custom widget)
+            ClipRRect(
+              borderRadius: BorderRadius.circular(15),
+              child: const SizedBox(
+                height: 130, // Example height, adjust as needed
+                child: MapScreenKecil(),
+              ),
             ),
 
-            const SizedBox(height: 8), // Moved SizedBox inside the Column
+            const SizedBox(height: 8),
+
+            // Search bar
+            Container(
+              height: 50, // Example height, adjust as needed
+              decoration: BoxDecoration(
+                color: Colors.grey.shade200,
+                borderRadius: BorderRadius.circular(20),
+                border: Border.all(
+                  color: Colors.grey.shade300,
+                  width: 1.0,
+                ),
+              ),
+              child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 12.0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.search,
+                      color: Colors.grey,
+                    ),
+                    SizedBox(width: 8),
+                    Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Search for a destination',
+                          hintStyle: TextStyle(color: Colors.grey),
+                          border: InputBorder.none,
+                        ),
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 8),
+
             Container(
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(8),
                 boxShadow: const [
                   BoxShadow(
-                    color: Colors.black12,
+                    color: Colors.transparent,
                     blurRadius: 8,
                   ),
                 ],
@@ -60,21 +87,31 @@ class DeliveryModalContent extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    Image.asset(
+                      'assets/images/pinplus.jpg',
+                      height: 50,
+                      width: 30,
+                    ),
+                    const SizedBox(height: 8),
                     const Text(
                       'Save an address for a faster booking',
                       style: TextStyle(
+                        color: Colors.black,
                         fontWeight: FontWeight.bold,
+                        fontSize: 17,
                       ),
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(height: 4),
                     const Text(
                       'Any frequently used address? Let’s save it & never type it ever again!',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 14,
+                      ),
                       textAlign: TextAlign.center,
                     ),
-                    const SizedBox(
-                        height:
-                            16), // Adding some space between the text and buttons
+                    const SizedBox(height: 16),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -82,26 +119,31 @@ class DeliveryModalContent extends StatelessWidget {
                           onPressed: () {},
                           icon: const Icon(Icons.home, color: Colors.black),
                           label: const Text(
-                            'Home Work',
+                            'Home',
                             style: TextStyle(color: Colors.black),
                           ),
                           style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.black,
                             backgroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
                           ),
                         ),
-                        const SizedBox(width: 8), // Memberi jarak antara tombol
+                        const SizedBox(width: 8),
                         ElevatedButton.icon(
                           onPressed: () {},
                           icon: const Icon(Icons.work, color: Colors.black),
                           label: const Text(
-                            'Save Work',
+                            'Work',
                             style: TextStyle(color: Colors.black),
                           ),
                           style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.black,
-                            backgroundColor: Colors
-                                .white, // Warna teks dan ikon saat tombol ditekan
+                            backgroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
                           ),
                         ),
                       ],
