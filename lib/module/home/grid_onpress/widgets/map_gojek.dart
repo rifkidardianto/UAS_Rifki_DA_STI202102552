@@ -65,15 +65,15 @@ class MapScreen extends StatelessWidget {
                           label: const Text(
                             'Edit',
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.green,
                               fontWeight: FontWeight.bold,
                               fontSize: 15,
                             ),
                           ),
                           style: ElevatedButton.styleFrom(
                             minimumSize: const Size(0, 35),
-                            foregroundColor: Colors.white,
-                            backgroundColor: Colors.green,
+                            foregroundColor: Colors.green,
+                            backgroundColor: Colors.white,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30),
                             ),

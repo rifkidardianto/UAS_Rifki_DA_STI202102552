@@ -57,7 +57,7 @@ class DeliveryModalContent extends StatelessWidget {
                     Expanded(
                       child: TextField(
                         decoration: InputDecoration(
-                          hintText: 'Search for a destination',
+                          hintText: 'Cari lokasi tujuan',
                           hintStyle: TextStyle(color: Colors.grey),
                           border: InputBorder.none,
                         ),
@@ -94,7 +94,7 @@ class DeliveryModalContent extends StatelessWidget {
                     ),
                     const SizedBox(height: 8),
                     const Text(
-                      'Save an address for a faster booking',
+                      'Simpan alamat, pesan lebih cepat',
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
@@ -104,7 +104,7 @@ class DeliveryModalContent extends StatelessWidget {
                     ),
                     const SizedBox(height: 4),
                     const Text(
-                      'Any frequently used address? Let’s save it & never type it ever again!',
+                      'Ada alamat yang sering dipakai? Simpan yuk, biar gak ribet ketik alamat lagi.',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 14,
@@ -119,8 +119,8 @@ class DeliveryModalContent extends StatelessWidget {
                           onPressed: () {},
                           icon: const Icon(Icons.home, color: Colors.black),
                           label: const Text(
-                            'Home',
-                            style: TextStyle(color: Colors.black),
+                            'Simpan Rumah',
+                            style: TextStyle(color: Colors.black, fontSize: 12),
                           ),
                           style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.black,
@@ -135,8 +135,8 @@ class DeliveryModalContent extends StatelessWidget {
                           onPressed: () {},
                           icon: const Icon(Icons.work, color: Colors.black),
                           label: const Text(
-                            'Work',
-                            style: TextStyle(color: Colors.black),
+                            'Simpan Kantor',
+                            style: TextStyle(color: Colors.black, fontSize: 12),
                           ),
                           style: ElevatedButton.styleFrom(
                             foregroundColor: Colors.black,
