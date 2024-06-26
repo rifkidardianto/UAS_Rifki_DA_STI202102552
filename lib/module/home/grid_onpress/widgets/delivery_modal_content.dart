@@ -106,7 +106,7 @@ class DeliveryModalContent extends StatelessWidget {
                     const Text(
                       'Ada alamat yang sering dipakai? Simpan yuk, biar gak ribet ketik alamat lagi.',
                       style: TextStyle(
-                        color: Colors.black,
+                        color: Colors.grey,
                         fontSize: 14,
                       ),
                       textAlign: TextAlign.center,
